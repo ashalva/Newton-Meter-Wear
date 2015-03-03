@@ -1,0 +1,4 @@
+C:\Users\Fenomeno\Documents\Projects\AndroidWear\AndroidWear\bin\Debug\AndroidWear.dll
+C:\Users\Fenomeno\Documents\Projects\AndroidWear\packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll
+C:\Users\Fenomeno\Documents\Projects\AndroidWear\packages\Xamarin.Android.Support.v7.RecyclerView.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Users\Fenomeno\Documents\Projects\AndroidWear\packages\Xamarin.Android.Wear.1.1.0.2\lib\MonoAndroid44\Xamarin.Android.Wearable.dll
