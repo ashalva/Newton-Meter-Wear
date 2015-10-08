@@ -24,15 +24,15 @@ namespace AndroidWear
 			//e.Action = MotionEventActions.
 			//var gestureDetector = new GestureDetector(
 		}
-		/* this is comment for fake pull */
+		/* this is comment for fake pull 1*/
 		private WearableListView mListView;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
 			listItems = new List<int> ();
-			for (int i=10; i<200; i++)
-			{
+			for (int i = 10; i < 200; i++) {
 				listItems.Add (i);
 			}
 			// Set our view from the "main" layout resource
@@ -43,8 +43,8 @@ namespace AndroidWear
 			v.SetBackgroundColor (Color.ParseColor ("#006666"));
 			v.LayoutInflated += delegate {
 
-				mListView = v.FindViewById<WearableListView>(Resource.Id.weightListview);
-				mListView.SetAdapter(new ProjectAdapter(this));
+				mListView = v.FindViewById<WearableListView> (Resource.Id.weightListview);
+				mListView.SetAdapter (new ProjectAdapter (this));
 				//mListView.SetClickListener(this);
 				// Get our button from the layout resource,x	
 				// and attach an event to it
@@ -55,6 +55,7 @@ namespace AndroidWear
 				//};
 			};
 		}
+
 		private static List<int> listItems;
 
 		public class ProjectAdapter : WearableListView.Adapter
@@ -62,33 +63,32 @@ namespace AndroidWear
 			List<int> projects;
 			Context context;
 
-			public ProjectAdapter(Context context)
+			public ProjectAdapter (Context context)
 			{
 				projects = listItems;
 				this.context = context;
 			}
 
-			public override void OnBindViewHolder(Android.Support.V7.Widget.RecyclerView.ViewHolder p0, int p1)
+			public override void OnBindViewHolder (Android.Support.V7.Widget.RecyclerView.ViewHolder p0, int p1)
 			{
-				var view = p0.ItemView.FindViewById<TextView>(Resource.Id.textView);
-				view.Text = ""+projects[p1];
+				var view = p0.ItemView.FindViewById<TextView> (Resource.Id.textView);
+				view.Text = "" + projects [p1];
 			}
 
-			public override Android.Support.V7.Widget.RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup p0, int p1)
+			public override Android.Support.V7.Widget.RecyclerView.ViewHolder OnCreateViewHolder (ViewGroup p0, int p1)
 			{
-				return new MyViewHolder(LayoutInflater.FromContext(context).Inflate(Resource.Layout.row_layout, null));
+				return new MyViewHolder (LayoutInflater.FromContext (context).Inflate (Resource.Layout.row_layout, null));
 			}
 
-			public override int ItemCount
-			{
+			public override int ItemCount {
 				get  { return projects.Count; }
 			}
 		}
 
 		public class MyViewHolder : Android.Support.V7.Widget.RecyclerView.ViewHolder
 		{
-			public MyViewHolder(View view)
-				: base(view)
+			public MyViewHolder (View view)
+				: base (view)
 			{                
 			}
 		}
