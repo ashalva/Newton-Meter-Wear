@@ -24,7 +24,7 @@ namespace AndroidWear
 			//e.Action = MotionEventActions.
 			//var gestureDetector = new GestureDetector(
 		}
-		/* this is comment for fake pull 0 2 6 12 20 30 ? */
+		/* this is comment for fake pull 0 2 6 12 20 30 42? */
 		private WearableListView mListView;
 
 		protected override void OnCreate (Bundle bundle)
